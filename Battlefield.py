@@ -1,15 +1,28 @@
+from dinosaur import Dinosaur
+from robot import Robot
+
 class Battlefield:
-    def __init__(self, run, display_welcome, battle_phase, display_winner):
-        self.fightcommand = display_welcome
-        self.mode_fight = battle_phase
-        self.champ_decided = display_winner
+    def __init__(self):
+        self.dinosaur = Dinosaur('Blue')
+        self.robot = Robot('T1K')
 
+    def run_game(self):
+        pass
 
-    def commence(self, fight_begin):
-        self.fightcommand == fight_begin
+    def display_welcome(self):
+        print('Greetings mortals!')
+
+    def battle_phase(self):
+        aint_dead_yet = self.health <= 0
+        if self.dinosaur.aint_dead_yet() and self.robot.aint_dead_yet():
+            self.dinosaur.attack(self.robot)
+            self.robot.attack(self.dinosaur)
+            
+        elif aint_dead_yet != True:
+            
+            return 
+
+    def display_winner():
+        pass
     
-    def battle(self, battle):
-        self.mode_fight == battle
-
-    def champ(self, decided):
-        self.champ_decided == decided
+    
