@@ -11,7 +11,6 @@ class Robot:
 
 
     def attack(self, dinosaur):
-        if self.aint_dead_yet():
-            aint_dead_yet = self.health >= 0 
-            print(f'{self.name} attacks {dinosaur.name}')
+        dinosaur.health -= self.active_weapon.attack_power
+        print(f'{self.name} attacks {dinosaur.name}')
 

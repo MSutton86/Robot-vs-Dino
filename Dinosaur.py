@@ -6,7 +6,7 @@ class Dinosaur:
         
 
     def attack(self, robot):
-        if self.aint_dead_yet():
-            print(f'{self.name} attacks {robot.name}')
+        robot.health -= self.attack_power
+        print(f'{self.name} attacks {robot.name}')
 
     
